@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Independent public-records research portal tracking Copperas Cove budgets, expenditures, payroll, utilities, golf course spending, grants, debt, contracts and infrastructure changes." />
+  <title>Copperas Cove Money Trail</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="wrap header-row">
+      <a class="brand" href="#top" aria-label="Copperas Cove Money Trail home">
+        <span class="brand-mark">CC</span>
+        <span><strong>Copperas Cove</strong><small>Money Trail</small></span>
+      </a>
+      <button class="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+      <nav id="nav" aria-label="Primary">
+        <a href="#money">Money</a><a href="#utilities">Utilities</a><a href="#payroll">Payroll</a><a href="#golf">Golf</a><a href="#dominion">Dominion</a><a href="#timeline">Timeline</a><a href="#sources">Sources</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="wrap hero-grid">
+        <div>
+          <p class="eyebrow">INDEPENDENT MUNICIPAL RECORDS PROJECT</p>
+          <h1>Follow the money.<br><span>Follow the infrastructure.</span></h1>
+          <p class="lede">A searchable record of what Copperas Cove budgets, spends, borrows, receives, transfers, promises, changes and builds. If public money touches it, it belongs here.</p>
+          <div class="hero-actions"><a class="btn primary" href="#explorer">Search the money trail</a><a class="btn ghost" href="#method">How this works</a></div>
+          <p class="disclaimer">Documentary / archival project. Not affiliated with or authorized by the City of Copperas Cove.</p>
+        </div>
+        <aside class="hero-card" aria-label="Project scope">
+          <span class="live-dot">CURRENT RESEARCH SCOPE</span>
+          <strong>Budget → Actuals → Recipient → Result</strong>
+          <p>Budgets, expenditures, salaries, benefits, water, wastewater, solid waste, golf course, Dominion/Fort Cavazos, capital projects, debt, grants, contracts and vendors.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="alert-strip" aria-label="Current water issue">
+      <div class="wrap alert-row"><strong>2026 WATER EVENT</strong><span>Saved city snapshot preserves the Aug. 16 main break, pressure loss, boil-water notice, Stage 4C alerts, recovery updates and disaster declaration.</span><button class="text-btn" data-filter="water">View water records →</button></div>
+    </section>
+
+    <section class="section" id="explorer">
+      <div class="wrap">
+        <div class="section-head"><div><p class="eyebrow">PUBLIC MONEY EXPLORER</p><h2>Search across the whole city</h2></div><p>Start broad. Then drill into a department, fund, project, vendor or year.</p></div>
+        <div class="search-panel">
+          <label for="search">Search records</label>
+          <div class="search-row"><input id="search" type="search" placeholder="Try: water, golf, TMRS, Dominion, wastewater…" /><button id="clearSearch" type="button">Clear</button></div>
+          <div class="chips" id="chips" aria-label="Filter records"></div>
+        </div>
+        <div class="results-meta"><strong id="resultCount">0 records</strong><span id="activeFilter">All categories</span></div>
+        <div class="record-grid" id="recordGrid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section dark" id="money">
+      <div class="wrap">
+        <div class="section-head"><div><p class="eyebrow">THE LEDGER</p><h2>Anything that touches money</h2></div><p>Track both sides of the transaction: where the money came from and where it went.</p></div>
+        <div class="scope-grid">
+          <article><b>Revenue</b><p>Property tax, sales tax, utility revenue, fees, permits, fines, grants, debt proceeds, interest and transfers.</p></article>
+          <article><b>Spending</b><p>Payroll, benefits, overtime, vendors, construction, equipment, vehicles, insurance, maintenance, technology, travel and training.</p></article>
+          <article><b>Movement</b><p>Budget amendments, interfund transfers, fund balance use, change orders, emergency purchases and reimbursements.</p></article>
+          <article><b>Obligations</b><p>Bonds, certificates of obligation, leases, financing agreements, matching requirements and long-term liabilities.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="utilities">
+      <div class="wrap">
+        <div class="section-head"><div><p class="eyebrow">PUBLIC WORKS</p><h2>Water, wastewater & solid waste</h2></div><p>Separate systems, separate money trails, one infrastructure story.</p></div>
+        <div class="utility-grid">
+          <article class="feature-card"><span>01</span><h3>Water Distribution</h3><p>Mains, tanks, pumps, pressure zones, breaks, WCID purchases, drought stages, master plans, repairs and capital projects.</p><button class="text-btn" data-filter="water">Explore water →</button></article>
+          <article class="feature-card"><span>02</span><h3>Wastewater</h3><p>Treatment plants, collection mains, lift stations, permitted capacity, flows, overflows, rehabilitation and expansion.</p><button class="text-btn" data-filter="wastewater">Explore wastewater →</button></article>
+          <article class="feature-card"><span>03</span><h3>Solid Waste</h3><p>Collection, transfer, recycling, equipment, fleet, staffing, fees, revenue and capital work.</p><button class="text-btn" data-filter="solid waste">Explore solid waste →</button></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section pale" id="payroll">
+      <div class="wrap split">
+        <div><p class="eyebrow">TOTAL COMPENSATION</p><h2>Salary is only part of the cost.</h2><p class="lede small">Track base pay alongside overtime, incentives, allowances, insurance, retirement and other employer-paid benefits. Compare positions and departments across fiscal years.</p><button class="btn primary" data-filter="payroll">View payroll & benefits</button></div>
+        <div class="formula-card"><span>TRUE PERSONNEL COST</span><strong>Base pay</strong><i>+</i><strong>Overtime & incentives</strong><i>+</i><strong>Allowances</strong><i>+</i><strong>Health / dental / vision</strong><i>+</i><strong>TMRS & retirement</strong><i>+</i><strong>Other employer-paid benefits</strong></div>
+      </div>
+    </section>
+
+    <section class="section" id="golf">
+      <div class="wrap split reverse">
+        <div class="metric-card"><small>THE QUESTION</small><strong>What does the golf course actually cost?</strong><p>Revenue alone is not enough. Track operating expense, payroll, capital improvements, equipment, irrigation, water source, transfers/subsidies and rounds played when records support it.</p></div>
+        <div><p class="eyebrow">HILLS OF COVE GOLF COURSE</p><h2>Revenue vs. taxpayer support</h2><p>Year-by-year accounting will distinguish earned revenue from transfers, subsidies and capital spending, then compare the course with water and sewer priorities in the same fiscal years.</p><button class="btn primary" data-filter="golf">Open golf records</button></div>
+      </div>
+    </section>
+
+    <section class="section dark" id="dominion">
+      <div class="wrap split">
+        <div><p class="eyebrow">GRANTS & AGREEMENTS</p><h2>Dominion / Fort Cavazos</h2><p class="lede small">Track the Defense Economic Adjustment Assistance Grant, city agreements, Dominion Privatization Texas, project scope, payments, amendments and the final asset delivered.</p><button class="btn ghost" data-filter="dominion">View Dominion trail</button></div>
+        <div class="flow-card"><span>State / grant source</span><b>↓</b><span>City of Copperas Cove</span><b>↓</b><span>Agreement / recipient</span><b>↓</b><span>Project expenditures</span><b>↓</b><span>Delivered infrastructure</span></div>
+      </div>
+    </section>
+
+    <section class="section" id="timeline">
+      <div class="wrap">
+        <div class="section-head"><div><p class="eyebrow">THEN → CHANGES → NOW</p><h2>Promises need a timeline.</h2></div><p>Every major project can carry its own history of cost, schedule, wording and status changes.</p></div>
+        <div class="timeline" id="timelineList"></div>
+      </div>
+    </section>
+
+    <section class="section pale" id="method">
+      <div class="wrap">
+        <div class="section-head"><div><p class="eyebrow">RESEARCH METHOD</p><h2>Keep the receipts.</h2></div><p>Current pages are not enough. Municipal history lives in versions.</p></div>
+        <ol class="method-list">
+          <li><span>1</span><div><b>Capture the current site</b><p>Preserve the live CivicPlus structure, alerts, page IDs and document links.</p></div></li>
+          <li><span>2</span><div><b>Walk backward through Wayback</b><p>Compare historical pages and URLs, including material that no longer appears in navigation.</p></div></li>
+          <li><span>3</span><div><b>Pull underlying records</b><p>Budgets, actuals, CIPs, personnel plans, ordinances, resolutions, contracts, council packets, audits and PIR productions.</p></div></li>
+          <li><span>4</span><div><b>Normalize the money</b><p>Connect fund → department → project → vendor → amount → fiscal year → source document.</p></div></li>
+          <li><span>5</span><div><b>Show what changed</b><p>Original plan, amendments, actual spending, delays, cancellations, cost changes and final result.</p></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section" id="sources">
+      <div class="wrap">
+        <div class="section-head"><div><p class="eyebrow">SOURCE VAULT</p><h2>Primary records first</h2></div><p>Seed links below open the official city sources that will feed the database.</p></div>
+        <div class="source-grid">
+          <a href="https://www.copperascovetx.gov/185/Adopted-Budgets" target="_blank" rel="noopener"><b>Adopted Budgets</b><span>City Budget Department ↗</span></a>
+          <a href="https://www.copperascovetx.gov/184/Long-Range-Plans" target="_blank" rel="noopener"><b>Long-Range Plans</b><span>CIP / COP / Personnel ↗</span></a>
+          <a href="https://www.copperascovetx.gov/190/City-Ordinances" target="_blank" rel="noopener"><b>Ordinances</b><span>Budget & plan amendments ↗</span></a>
+          <a href="https://www.copperascovetx.gov/189/City-Resolutions" target="_blank" rel="noopener"><b>Resolutions</b><span>Contracts, debt & actions ↗</span></a>
+          <a href="https://www.copperascovetx.gov/167/Public-Works" target="_blank" rel="noopener"><b>Public Works</b><span>Utility departments ↗</span></a>
+          <a href="https://www.copperascovetx.gov/200/Benefits" target="_blank" rel="noopener"><b>Employee Benefits</b><span>TMRS & benefits ↗</span></a>
+          <a href="https://web.archive.org/web/*/https://www.copperascovetx.gov/" target="_blank" rel="noopener"><b>Wayback Machine</b><span>Historic city captures ↗</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="wrap footer-row"><div><strong>Copperas Cove Money Trail</strong><p>Independent archival and public-records research.</p></div><p>Facts should link to receipts. Corrections should link to better receipts.</p></div></footer>
+  <script src="data.js"></script><script src="app.js"></script>
+</body>
+</html>
