@@ -15,9 +15,9 @@
         <span class="brand-mark">CC</span>
         <span><strong>Copperas Cove</strong><small>Money Trail</small></span>
       </a>
-      <button class="menu-btn" aria-expanded="false" aria-controls="nav">Menu</button>
+      <button class="menu-btn" aria-expanded="false" aria-controls="nav" aria-label="Open navigation menu"><span aria-hidden="true">☰</span><span class="menu-label">Menu</span></button>
       <nav id="nav" aria-label="Primary">
-        <a href="#money">Money</a><a href="#utilities">Utilities</a><a href="#payroll">Payroll</a><a href="#golf">Golf</a><a href="#dominion">Dominion</a><a href="#timeline">Timeline</a><a href="#sources">Sources</a>
+        <a href="#years">By Year</a><a href="#money">Money</a><a href="#utilities">Utilities</a><a href="#payroll">Payroll</a><a href="#golf">Golf</a><a href="#dominion">Dominion</a><a href="#timeline">Timeline</a><a href="#sources">Sources</a>
       </nav>
     </div>
   </header>
@@ -47,6 +47,11 @@
     <section class="section" id="explorer">
       <div class="wrap">
         <div class="section-head"><div><p class="eyebrow">PUBLIC MONEY EXPLORER</p><h2>Search across the whole city</h2></div><p>Start broad. Then drill into a department, fund, project, vendor or year.</p></div>
+        <div class="year-browser" id="years" aria-labelledby="yearHeading">
+          <div class="year-browser-head"><div><p class="eyebrow">DOCUMENTS BY YEAR</p><h2 id="yearHeading">Browse 2007 → 2026</h2></div><p>Pick a year to see the City records, financial reports, infrastructure documents and archived sources connected to that year.</p></div>
+          <div class="year-grid" id="yearGrid" role="group" aria-label="Filter documents by year"></div>
+          <button class="text-btn year-reset" id="clearYear" type="button" hidden>Show all years</button>
+        </div>
         <div class="search-panel">
           <label for="search">Search records</label>
           <div class="search-row"><input id="search" type="search" placeholder="Try: water, golf, TMRS, Dominion, wastewater…" /><button id="clearSearch" type="button">Clear</button></div>
@@ -114,7 +119,7 @@
         <ol class="method-list">
           <li><span>1</span><div><b>Capture the current site</b><p>Preserve the live CivicPlus structure, alerts, page IDs and document links.</p></div></li>
           <li><span>2</span><div><b>Walk backward through Wayback</b><p>Compare historical pages and URLs, including material that no longer appears in navigation.</p></div></li>
-          <li><span>3</span><div><b>Pull underlying records</b><p>Budgets, actuals, CIPs, personnel plans, ordinances, resolutions, contracts, council packets, audits and PIR productions.</p></div></li>
+          <li><span>3</span><div><b>Pull underlying records</b><p>Budgets, actuals, CIPs, personnel plans, ordinances, resolutions, contracts, council packets and audits. Use public City records and archived public copies first; PIRs are a fallback when the public trail ends.</p></div></li>
           <li><span>4</span><div><b>Normalize the money</b><p>Connect fund → department → project → vendor → amount → fiscal year → source document.</p></div></li>
           <li><span>5</span><div><b>Show what changed</b><p>Original plan, amendments, actual spending, delays, cancellations, cost changes and final result.</p></div></li>
         </ol>
@@ -123,16 +128,13 @@
 
     <section class="section" id="sources">
       <div class="wrap">
-        <div class="section-head"><div><p class="eyebrow">SOURCE VAULT</p><h2>Primary records first</h2></div><p>Seed links below open the official city sources that will feed the database.</p></div>
-        <div class="source-grid">
-          <a href="https://www.copperascovetx.gov/185/Adopted-Budgets" target="_blank" rel="noopener"><b>Adopted Budgets</b><span>City Budget Department ↗</span></a>
-          <a href="https://www.copperascovetx.gov/184/Long-Range-Plans" target="_blank" rel="noopener"><b>Long-Range Plans</b><span>CIP / COP / Personnel ↗</span></a>
-          <a href="https://www.copperascovetx.gov/190/City-Ordinances" target="_blank" rel="noopener"><b>Ordinances</b><span>Budget & plan amendments ↗</span></a>
-          <a href="https://www.copperascovetx.gov/189/City-Resolutions" target="_blank" rel="noopener"><b>Resolutions</b><span>Contracts, debt & actions ↗</span></a>
-          <a href="https://www.copperascovetx.gov/167/Public-Works" target="_blank" rel="noopener"><b>Public Works</b><span>Utility departments ↗</span></a>
-          <a href="https://www.copperascovetx.gov/200/Benefits" target="_blank" rel="noopener"><b>Employee Benefits</b><span>TMRS & benefits ↗</span></a>
-          <a href="https://web.archive.org/web/*/https://www.copperascovetx.gov/" target="_blank" rel="noopener"><b>Wayback Machine</b><span>Historic city captures ↗</span></a>
+        <div class="section-head"><div><p class="eyebrow">SOURCE VAULT</p><h2>Primary records first</h2></div><p>Official pages, PDFs and City archive collections are paired with Wayback history links. If the City ever published it publicly and Wayback preserved it, readers can inspect that history directly.</p></div>
+        <div class="source-tools">
+          <label for="sourceSearch">Search the source vault</label>
+          <input id="sourceSearch" type="search" placeholder="Search PDFs, water, golf, personnel, budget…" autocomplete="off">
+          <p id="sourceCount" class="results-meta" aria-live="polite"></p>
         </div>
+        <div class="source-list" id="sourceList"></div>
       </div>
     </section>
   </main>
